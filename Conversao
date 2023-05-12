@@ -1,0 +1,20 @@
+/* Neste programa, solicitamos ao usuário que digite a temperatura em Kelvin
+usando a função Scan do pacote fmt. Em seguida, subtraímos 273.15 do valor
+em Kelvin para converter para Celsius.
+Por fim, exibimos o valor original em Kelvin e o valor convertido em graus Celsius
+usando a função Printf do pacote fmt. Os valores são exibidos com duas casas decimais. */
+
+package main
+
+import "fmt"
+
+func main() {
+	var kelvin float64
+
+	fmt.Print("Digite a temperatura em Kelvin: ")
+	fmt.Scan(&kelvin)
+
+	celsius := kelvin - 273.15
+
+	fmt.Printf("%.2f Kelvin é igual a %.2f graus Celsius\n", kelvin, celsius)
+}
